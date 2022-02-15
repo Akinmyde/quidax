@@ -25,6 +25,8 @@ export function useThemeColor(
 type ThemeProps = {
   lightColor?: string;
   darkColor?: string;
+  color?: string;
+  fontWeight?: string;
 };
 
 export type TextProps = ThemeProps & DefaultText['props'];

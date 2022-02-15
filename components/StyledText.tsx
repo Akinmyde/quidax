@@ -1,5 +1,13 @@
-import { Text, TextProps } from './Themed';
+import { Text as DefaultText, TextProps } from './Themed';
 
-export function MonoText(props: TextProps) {
-  return <Text {...props} style={[props.style, { fontFamily: 'space-mono' }]} />;
-}
+export const Text = (props: TextProps) => (
+  <DefaultText
+    {...props}
+    style={
+      [props.style,
+      {
+        fontFamily: props.fontWeight === 'bold' ? 'ubuntu-bold' : 'ubuntu',
+        color: props.color || 'black'
+      }]}
+  />
+)
