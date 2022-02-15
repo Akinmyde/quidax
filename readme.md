@@ -2,29 +2,6 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
 
-## Table of Contents
-
-* [Updating to New Releases](#updating-to-new-releases)
-* [Available Scripts](#available-scripts)
-  * [npm start](#npm-start)
-  * [npm test](#npm-test)
-  * [npm run ios](#npm-run-ios)
-  * [npm run android](#npm-run-android)
-  * [npm run eject](#npm-run-eject)
-* [Writing and Running Tests](#writing-and-running-tests)
-* [Environment Variables](#environment-variables)
-  * [Configuring Packager IP Address](#configuring-packager-ip-address)
-* [Customizing App Display Name and Icon](#customizing-app-display-name-and-icon)
-* [Sharing and Deployment](#sharing-and-deployment)
-  * [Publishing to Expo's React Native Community](#publishing-to-expos-react-native-community)
-  * [Building an Expo "standalone" app](#building-an-expo-standalone-app)
-  * [Ejecting from Create React Native App](#ejecting-from-create-react-native-app)
-    * [Build Dependencies (Xcode & Android Studio)](#build-dependencies-xcode-android-studio)
-    * [Should I Use ExpoKit?](#should-i-use-expokit)
-* [Troubleshooting](#troubleshooting)
-  * [Networking](#networking)
-  * [iOS Simulator won't open](#ios-simulator-wont-open)
-  * [QR Code does not scan](#qr-code-does-not-scan)
 
 # Project Setup
 
@@ -32,8 +9,11 @@ Below you'll find information about performing common tasks. The most recent ver
 Yon need to install the expo application on your phone to use this app on your phoe.
 Alternatively, you can run the app on your computer IOS (Xcode) or Android (Android Studio)
 
-
-##Installing all dependencies required
+## Production App URL
+```
+https://expo.dev/@akinmyde/quidax
+```
+## Installing all dependencies required
 ```
 run npm install or yarn install
 ```
@@ -47,3 +27,16 @@ yarn run ios
 ```
 yarn run android
 ```
+
+# Assumptions
+I make us of React Context to manage my state. Expecially the part of persisting the cart. An alternative would have been making use of a store like redux or perhaps use the the Async-Storage package.
+
+I make use of Context API because I really don't want to add another layer of obfuscation to the code. I see the application a basic as it is since I only need to manage few states and data.
+
+# Requirements
+Due to time, I was not able to perfectly implement the search feature to my taste and the taste of the requiremnt. Although, it is hard to notice that something is off.
+
+## Issues
+The main issue is faced completing this assessment is time. due to my current tight schedule,I was only able to dedicate few hours of my time for this assessment.
+
+## Feedback
