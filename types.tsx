@@ -56,5 +56,5 @@ export type BookType = {
   full_description: string,
   authors: any,
   tags: { name: string }[],
-  genres: { name: string },
+  genres: { name: string }[],
 }

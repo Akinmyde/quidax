@@ -43,10 +43,9 @@ const Search = styled(SearchIcon)`
 
 interface Props {
     setShowSearch: (val: boolean) => void;
-    navigation: any
 }
 
-export const SearchHeader = ({ setShowSearch, navigation }: Props) => {
+export const SearchHeader = ({ setShowSearch }: Props) => {
     const { setSearchValue } = useContext(SearchContext);
     const inputRef = useRef(null);
     const [value, setValue] = useState<string>('')
@@ -68,11 +67,16 @@ export const SearchHeader = ({ setShowSearch, navigation }: Props) => {
         setSearchActive(true)
     }
 
+    const onChangeText = (e: any) => {
+        setSearchActive(true)
+        setValue(e)
+    }
+
     return (
         <SearchWrapper>
             <TouchableOpacity onPress={onBackClick}><ArrowIcon /></TouchableOpacity>
             <SearchContainer>
-                <Input placeholderTextColor="black" value={value} placeholder='Book, genre, authors, e.t.c' onChangeText={(e) => setValue(e)} />
+                <Input placeholderTextColor="black" value={value} placeholder='Book, genre, authors, e.t.c' onChangeText={(e) => onChangeText(e)} />
                 {searchActive ? <TouchableOpacity onPress={() => onSearchClick()}><Search /></TouchableOpacity> :
                     <TouchableOpacity onPress={onCancelClick}><Close /></TouchableOpacity>
                 }

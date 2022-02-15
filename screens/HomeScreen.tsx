@@ -94,8 +94,9 @@ const HomeScreen = ({ navigation }: any) => {
         if (searchValue) {
             const searchResult = books?.filter((book: BookType) => {
                 return book.title.toLowerCase().includes(searchValue) ||
-                    book.authors[0].name.toLowerCase().includes(searchValue)
-                // book.genres.filter(genre => genre.name.toLowerCase().includes(searchValue)) 
+                    book.authors[0].name.toLowerCase().includes(searchValue) ||
+                    book.tags.some((tag) => tag.name.toLowerCase().includes(searchValue)) ||
+                    book.genres.some((genre) => genre.name.toLowerCase().includes(searchValue))
             })
             setFilterredBooks(searchResult)
         }
