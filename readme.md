@@ -13,6 +13,12 @@ Alternatively, you can run the app on your computer IOS (Xcode) or Android (Andr
 ```
 https://expo.dev/@akinmyde/quidax
 ```
+ Or download the APK here
+ 
+```
+https://drive.google.com/file/d/1dmARYPd8g1MFAw5VrUjvRr7gJjxszrSN/view?usp=sharing
+```
+ 
 ## Installing all dependencies required
 ```
 run npm install or yarn install
